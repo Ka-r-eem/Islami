@@ -61,6 +61,6 @@ class _HomeScreenState extends State<HomeScreen> {
     QuranTab(),
     TasbehTab(),
     HadethTab(),
-    RadioTab()
+    RadioTab(),
   ];
 }
