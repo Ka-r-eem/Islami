@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami10/ui/quran/ChapterTitleWidget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranTab extends StatelessWidget {
   List<String> names = [
@@ -125,6 +126,13 @@ class QuranTab extends StatelessWidget {
       body: Column(
         children: [
           Expanded(child: Image(image: AssetImage("assets/images/qur2an_screen_logo.png"))),
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(12),
+            width: double.infinity,
+            decoration: BoxDecoration(border: Border.symmetric(horizontal : BorderSide(color:Theme.of(context).colorScheme.secondary ,width: 2 ))),
+            child: Text(AppLocalizations.of(context)!.chapter_name , style: TextStyle(fontSize: 25 , fontWeight: FontWeight.bold , color: Theme.of(context).colorScheme.onPrimary),),
+          ),
           Expanded(
             flex: 3,
             child: ListView.separated(
@@ -134,7 +142,7 @@ class QuranTab extends StatelessWidget {
                 separatorBuilder: (context, index)=>
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 65),
-                    color: Color(0xFFB7935F),
+                    color: Theme.of(context).colorScheme.secondary,
                     width: double.infinity,
                     height: 2,
                   )

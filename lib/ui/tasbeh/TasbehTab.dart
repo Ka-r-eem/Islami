@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:islami10/providers/SettingsProvider.dart';
+import 'package:islami10/ui/MyThemeData.dart';
+import 'package:provider/provider.dart';
 
 class TasbehTab extends StatefulWidget {
   int tasbeehNum = 0;
@@ -21,6 +24,8 @@ class _TasbehTabState extends State<TasbehTab> {
 
   @override
   Widget build(BuildContext context) {
+    SettingsProvider settingsProvider = Provider.of<SettingsProvider>(context);
+
     return Scaffold(
       body: Column(
         children: [
@@ -32,36 +37,40 @@ class _TasbehTabState extends State<TasbehTab> {
               children: [
                 Container(
                     margin: const EdgeInsets.only(left: 50),
-                    child: const Image(
-                        image: AssetImage("assets/images/head_sebha_logo.png"))),
+                    child:  Image(
+                        image: AssetImage(
+                            settingsProvider.currentTheme == ThemeMode.dark ? "assets/images/head_sebha_dark.png":
+                            "assets/images/head_sebha_logo.png"))),
                 Container(
                     margin: const EdgeInsets.only(top: 75),
                     child: Transform.rotate(
                       angle: widget.RotateAngle,
-                      child: const Image(
-                          image: AssetImage("assets/images/body_sebha_logo.png")),
+                      child:  Image(
+                          image: AssetImage(
+                              settingsProvider.currentTheme == ThemeMode.dark ? "assets/images/body_sebha_dark.png":
+                              "assets/images/body_sebha_logo.png")),
                     )),
               ],
             ),
           ),
-          const Text(
+           Text(
             "عدد التسبيحات",
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold , color: Theme.of(context).colorScheme.onPrimary),
           ),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 15),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: const Color(0xFFBEA584)),
+                color: Theme.of(context).primaryColor),
             width: 70,
             height: 80,
             child: Center(
                 child: Text(
               "${widget.tasbeehNum}",
-              style: const TextStyle(
+              style:  TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w400,
-                  color: Colors.black87),
+                  color: Theme.of(context).colorScheme.onPrimary),
             )),
           ),
           Container(
@@ -79,13 +88,13 @@ class _TasbehTabState extends State<TasbehTab> {
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFB7935F),
+                    backgroundColor: Theme.of(context).colorScheme.secondary,
                     padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30))),
                 child: Text(
                   Doaa[index],
-                  style: const TextStyle(fontSize: 25, color: Colors.white),
+                  style:  TextStyle(fontSize: 25, color: Theme.of(context).colorScheme.onSecondary),
                 )),
           ),
           Visibility(
