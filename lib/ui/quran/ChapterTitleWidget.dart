@@ -18,7 +18,7 @@ class ChapterTitleWidget extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             "$title",
-            style: TextStyle(fontSize: 25),
+            style: TextStyle(fontSize: 25 , color: Theme.of(context).colorScheme.onPrimary),
           )),
     );
   }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami10/providers/SettingsProvider.dart';
 import 'package:islami10/ui/ChapterDetails/VerseWidget.dart';
+import 'package:islami10/ui/MyThemeData.dart';
+import 'package:provider/provider.dart';
 
 class ChapterDetailsScreen extends StatefulWidget {
   static const String routeName = "ChapterDetails";
@@ -12,20 +15,26 @@ class ChapterDetailsScreen extends StatefulWidget {
 class _ChapterDetailsScreenState extends State<ChapterDetailsScreen> {
   @override
   Widget build(BuildContext context) {
+    var settingsProvider = Provider.of<SettingsProvider>(context);
+
     ChapterDetailsArgs args =
         ModalRoute.of(context)?.settings.arguments as ChapterDetailsArgs;
     if (verses.isEmpty) {
       loadFile(args.index);
     }
     return Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/main_background.png"),
+              image: AssetImage(
+                settingsProvider.getBackgroundImage()
+              ),
               fit: BoxFit.fill),
         ),
         child: Scaffold(
           appBar: AppBar(
-            title: Text(args.title),
+            title: Text(args.title,
+                style:
+                    TextStyle(color: Theme.of(context).colorScheme.onPrimary)),
           ),
           body: verses.isEmpty
               ? Center(child: CircularProgressIndicator())

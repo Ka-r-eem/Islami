@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami10/ui/hadeth/HadethTitleWidget.dart';
 import 'Hadeth.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadethTab extends StatefulWidget {
   @override
@@ -25,10 +26,10 @@ class _HadethTabState extends State<HadethTab> {
             decoration: BoxDecoration(
                 border: Border.symmetric(
                     horizontal: BorderSide(
-                        color: Theme.of(context).primaryColor, width: 2))),
+                        color: Theme.of(context).colorScheme.secondary, width: 2))),
             child: Text(
-              "Hadeth",
-              style: TextStyle(fontSize: 24),
+              AppLocalizations.of(context)!.hadeth,
+              style: TextStyle(fontSize: 24 , color: Theme.of(context).colorScheme.onPrimary),
             )),
         Expanded(
           flex: 3,
