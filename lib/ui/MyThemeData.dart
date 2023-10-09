@@ -46,7 +46,7 @@ class MyThemeData {
           iconTheme: IconThemeData( color: Colors.black),
           backgroundColor: Colors.transparent,
           centerTitle: true,
-          titleTextStyle: TextStyle(color: Colors.black, fontSize: 28),
+          titleTextStyle: TextStyle(color: Colors.black, fontSize: 28 , fontFamily: "ElMessiri-SemiBold" , fontWeight: FontWeight.bold),
           shadowColor: Colors.transparent));
 
 
@@ -83,7 +83,7 @@ class MyThemeData {
           iconTheme: IconThemeData( color: Colors.white),
           backgroundColor: Colors.transparent,
           centerTitle: true,
-          titleTextStyle: TextStyle(color: Colors.black, fontSize: 28),
+          titleTextStyle: TextStyle(color: Colors.black, fontSize: 28 , fontFamily: "ElMessiri-SemiBold" , fontWeight: FontWeight.bold),
           shadowColor: Colors.transparent), colorScheme: ColorScheme.fromSeed(
           seedColor: darkPrimary,
           primary: darkPrimary,

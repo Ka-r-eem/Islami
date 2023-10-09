@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     SettingsProvider settingsProvider = Provider.of<SettingsProvider>(context);
 
     return MaterialApp(
-      title: "Islami",
+      title: "Kareem_ISLAMI",
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
       themeMode: settingsProvider.currentTheme,
@@ -38,13 +38,13 @@ class MyApp extends StatelessWidget {
 
       },
       initialRoute: splashScreen.routeName,
-      localizationsDelegates: [
+      localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [
+      supportedLocales: const [
         Locale('en'), // English
         Locale('ar'), // Spanish
       ],

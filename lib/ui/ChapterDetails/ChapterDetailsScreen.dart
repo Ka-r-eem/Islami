@@ -37,10 +37,10 @@ class _ChapterDetailsScreenState extends State<ChapterDetailsScreen> {
                     TextStyle(color: Theme.of(context).colorScheme.onPrimary)),
           ),
           body: verses.isEmpty
-              ? Center(child: CircularProgressIndicator())
+              ? const Center(child: CircularProgressIndicator())
               : Card(
                   elevation: 30,
-                  margin: EdgeInsets.symmetric(vertical: 50, horizontal: 24),
+                  margin: const EdgeInsets.symmetric(vertical: 50, horizontal: 24),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)),
                   child: ListView.builder(

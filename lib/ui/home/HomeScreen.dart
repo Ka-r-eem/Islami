@@ -44,19 +44,19 @@ class _HomeScreenState extends State<HomeScreen> {
             currentIndex: selectedIndex,
             items: [
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/icon_quran.png")),
+                  icon: const ImageIcon(AssetImage("assets/images/icon_quran.png")),
                   label: AppLocalizations.of(context)!.quran),
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/icon_sebha.png")),
+                  icon: const ImageIcon(AssetImage("assets/images/icon_sebha.png")),
                   label: AppLocalizations.of(context)!.tasbeh),
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/icon_hadeth.png")),
+                  icon: const ImageIcon(AssetImage("assets/images/icon_hadeth.png")),
                   label: AppLocalizations.of(context)!.hadeth),
+              // BottomNavigationBarItem(
+              //     icon: ImageIcon(AssetImage("assets/images/icon_radio.png")),
+              //     label: AppLocalizations.of(context)!.radio),
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/icon_radio.png")),
-                  label: AppLocalizations.of(context)!.radio),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.settings),
+                  icon: const Icon(Icons.settings),
                   label: AppLocalizations.of(context)!.settings),
             ],
           ),
@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
     QuranTab(),
     TasbehTab(),
     HadethTab(),
-    RadioTab(),
+    // RadioTab(),
     SettingsTab(),
   ];
 }
