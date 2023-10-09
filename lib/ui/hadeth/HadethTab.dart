@@ -29,7 +29,7 @@ class _HadethTabState extends State<HadethTab> {
                         color: Theme.of(context).colorScheme.secondary, width: 2))),
             child: Text(
               AppLocalizations.of(context)!.hadeth,
-              style: TextStyle(fontSize: 24 , color: Theme.of(context).colorScheme.onPrimary),
+              style: TextStyle(fontSize: 24 ,fontWeight: FontWeight.w600, color: Theme.of(context).colorScheme.onPrimary , fontFamily: "JF Flat regular"),
             )),
         Expanded(
           flex: 3,

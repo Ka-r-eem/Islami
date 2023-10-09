@@ -30,7 +30,7 @@ class _SettingsTabState extends State<SettingsTab> {
               showThemeBottomSheet();
             },
             child: Container(
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.background,

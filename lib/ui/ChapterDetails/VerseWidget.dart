@@ -14,7 +14,7 @@ class VerseWidget extends StatelessWidget {
         child: Text(
           "$content{${index+1}}",
           textDirection: TextDirection.rtl,
-          style: TextStyle(fontSize: 25 , fontWeight: FontWeight.bold , color: Theme.of(context).colorScheme.secondary),
+          style: TextStyle(fontSize: 25 , fontWeight: FontWeight.w100 , color: Theme.of(context).colorScheme.secondary ,fontFamily: "ElMessiri-SemiBold"),
         ));
   }
 }

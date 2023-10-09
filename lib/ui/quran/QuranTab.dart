@@ -131,7 +131,7 @@ class QuranTab extends StatelessWidget {
             padding: EdgeInsets.all(12),
             width: double.infinity,
             decoration: BoxDecoration(border: Border.symmetric(horizontal : BorderSide(color:Theme.of(context).colorScheme.secondary ,width: 2 ))),
-            child: Text(AppLocalizations.of(context)!.chapter_name , style: TextStyle(fontSize: 25 , fontWeight: FontWeight.bold , color: Theme.of(context).colorScheme.onPrimary),),
+            child: Text(AppLocalizations.of(context)!.chapter_name , style: TextStyle(fontSize: 25 , fontWeight: FontWeight.bold , color: Theme.of(context).colorScheme.onPrimary ,fontFamily: "JF Flat regular"),),
           ),
           Expanded(
             flex: 3,

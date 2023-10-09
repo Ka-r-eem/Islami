@@ -22,7 +22,7 @@ class HadethTitleWidget extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             hadeth.title,
-            style: TextStyle(fontSize: 25 , fontWeight: FontWeight.w500 , color: Theme.of(context).colorScheme.onPrimary),
+            style: TextStyle(fontSize: 30 , fontWeight: FontWeight.w500 , color: Theme.of(context).colorScheme.onPrimary ,fontFamily: "DTHULUTH"),
           )),
     );
   }

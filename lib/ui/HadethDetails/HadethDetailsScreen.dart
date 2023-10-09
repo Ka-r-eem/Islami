@@ -38,7 +38,8 @@ class HadethDetailsScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 20,
-                      color: Theme.of(context).colorScheme.secondary
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontFamily:"JF Flat regular"
                     ),
                   ),
                 ),

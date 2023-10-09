@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islami10/providers/SettingsProvider.dart';
-import 'package:islami10/ui/MyThemeData.dart';
 import 'package:provider/provider.dart';
 
 class TasbehTab extends StatefulWidget {
@@ -106,13 +105,13 @@ class _TasbehTabState extends State<TasbehTab> {
                   setState(() {});
                 },
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFB7935F),
+                    backgroundColor:  Theme.of(context).colorScheme.secondary,
                     padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30))),
-                child: const Text(
+                child:  Text(
                   "RESET",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                  style: TextStyle(fontSize: 15, color: Theme.of(context).colorScheme.onSecondary),
                 )),
           )
         ],
